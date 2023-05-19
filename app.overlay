@@ -1,0 +1,55 @@
+/ {
+	test_gpio {
+		compatible = "gpio-leds";
+
+		main: test_main {
+			gpios = <&gpio0 02 GPIO_ACTIVE_HIGH>;
+			label = "Test Pin Main";
+		};
+
+        qos_req_all: test_104 {
+        	gpios = <&gpio1 4 GPIO_ACTIVE_HIGH>;
+        	label = "Test Pin QoS Request Allowed";
+        };
+
+		qos_req_den: test_103 {
+        	gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
+        	label = "Test Pin QoS Request Denied";
+        };
+
+		tim_start: test_112 {
+        	gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>;
+        	label = "Test Pin Timeslot Start Int";
+        };
+
+		tim_timer: test_111 {
+        	gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>;
+        	label = "Test Pin Timeslot Timer Int";
+        };
+
+		tim_radio: test_110 {
+        	gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
+        	label = "Test Pin Timeslot Radio Int";
+        };
+
+		tim_block: test_107 {
+        	gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;
+        	label = "Test Pin Timeslot Blocked";
+        };
+
+		tim_cancel: test_106 {
+        	gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
+        	label = "Test Pin Timeslot Cancelled";
+        };
+
+		tim_idle: test_105 {
+        	gpios = <&gpio1 5 GPIO_ACTIVE_HIGH>;
+        	label = "Test Pin Timeslot Idle";
+        };
+
+		test: test_pin {
+        	gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
+        	label = "General Test Pin";
+        };
+	};
+};
